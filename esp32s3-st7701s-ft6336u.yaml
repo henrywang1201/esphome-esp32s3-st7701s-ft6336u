@@ -185,6 +185,63 @@ globals:
     restore_value: no
     initial_value: "true"
 
+script:
+  - id: show_mode_none
+    then:
+      - lambda: |-
+          lv_obj_set_style_bg_color(id(mode_cool_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_heat_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_fan_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_dry_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_cool_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_heat_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_fan_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_dry_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+  - id: show_mode_cool
+    then:
+      - lambda: |-
+          lv_obj_set_style_bg_color(id(mode_cool_button), lv_color_hex(0x1A73E8), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_heat_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_fan_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_dry_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_cool_label), lv_color_hex(0xFFFFFF), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_heat_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_fan_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_dry_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+  - id: show_mode_heat
+    then:
+      - lambda: |-
+          lv_obj_set_style_bg_color(id(mode_cool_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_heat_button), lv_color_hex(0xE53935), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_fan_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_dry_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_cool_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_heat_label), lv_color_hex(0xFFFFFF), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_fan_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_dry_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+  - id: show_mode_fan
+    then:
+      - lambda: |-
+          lv_obj_set_style_bg_color(id(mode_cool_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_heat_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_fan_button), lv_color_hex(0x34A853), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_dry_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_cool_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_heat_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_fan_label), lv_color_hex(0xFFFFFF), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_dry_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+  - id: show_mode_dry
+    then:
+      - lambda: |-
+          lv_obj_set_style_bg_color(id(mode_cool_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_heat_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_fan_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
+          lv_obj_set_style_bg_color(id(mode_dry_button), lv_color_hex(0xF9AB00), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_cool_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_heat_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_fan_label), lv_color_hex(0x5F6368), LV_PART_MAIN);
+          lv_obj_set_style_text_color(id(mode_dry_label), lv_color_hex(0x202124), LV_PART_MAIN);
+
 sensor:
   - platform: homeassistant
     id: ac_current_temperature
@@ -224,20 +281,26 @@ text_sensor:
           if (x == "cool") {
             id(ac_is_on) = true;
             lv_label_set_text(id(mode_status_label), "MODE COOL");
+            id(show_mode_cool).execute();
           } else if (x == "heat") {
             id(ac_is_on) = true;
             lv_label_set_text(id(mode_status_label), "MODE HEAT");
+            id(show_mode_heat).execute();
           } else if (x == "fan_only") {
             id(ac_is_on) = true;
             lv_label_set_text(id(mode_status_label), "MODE FAN");
+            id(show_mode_fan).execute();
           } else if (x == "dry") {
             id(ac_is_on) = true;
             lv_label_set_text(id(mode_status_label), "MODE DRY");
+            id(show_mode_dry).execute();
           } else if (x == "off") {
             id(ac_is_on) = false;
             lv_label_set_text(id(mode_status_label), "MODE OFF");
+            id(show_mode_none).execute();
           } else {
             lv_label_set_text(id(mode_status_label), x.c_str());
+            id(show_mode_none).execute();
           }
           if (id(ac_is_on)) {
             lv_label_set_text(id(power_label), "ON");
@@ -386,11 +449,13 @@ lvgl:
                     if (id(ac_is_on)) {
                       lv_label_set_text(id(power_label), "ON");
                       lv_label_set_text(id(mode_status_label), "MODE COOL");
+                      id(show_mode_cool).execute();
                       lv_obj_set_style_bg_color(id(power_button), lv_color_hex(0x1A73E8), LV_PART_MAIN);
                       lv_obj_set_style_text_color(id(power_label), lv_color_hex(0xFFFFFF), LV_PART_MAIN);
                     } else {
                       lv_label_set_text(id(power_label), "OFF");
                       lv_label_set_text(id(mode_status_label), "MODE OFF");
+                      id(show_mode_none).execute();
                       lv_obj_set_style_bg_color(id(power_button), lv_color_hex(0xE8EAED), LV_PART_MAIN);
                       lv_obj_set_style_text_color(id(power_label), lv_color_hex(0x202124), LV_PART_MAIN);
                     }
@@ -456,11 +521,13 @@ lvgl:
                     width: 104
                     height: 70
                     radius: 8
-                    bg_color: 0x1A73E8
+                    bg_color: 0xE8EAED
+                    border_width: 0
                     on_click:
                       - lvgl.label.update:
                           id: mode_status_label
                           text: "MODE COOL"
+                      - script.execute: show_mode_cool
                       - homeassistant.service:
                           service: climate.set_hvac_mode
                           data:
@@ -468,10 +535,11 @@ lvgl:
                             hvac_mode: cool
                     widgets:
                       - label:
+                          id: mode_cool_label
                           text: "COOL"
                           align: center
                           text_font: montserrat_16
-                          text_color: 0xFFFFFF
+                          text_color: 0x5F6368
 
                 - button:
                     id: mode_heat_button
@@ -480,12 +548,13 @@ lvgl:
                     width: 104
                     height: 70
                     radius: 8
-                    bg_color: 0xE53935
+                    bg_color: 0xE8EAED
                     border_width: 0
                     on_click:
                       - lvgl.label.update:
                           id: mode_status_label
                           text: "MODE HEAT"
+                      - script.execute: show_mode_heat
                       - homeassistant.service:
                           service: climate.set_hvac_mode
                           data:
@@ -493,10 +562,11 @@ lvgl:
                             hvac_mode: heat
                     widgets:
                       - label:
+                          id: mode_heat_label
                           text: "HEAT"
                           align: center
                           text_font: montserrat_16
-                          text_color: 0xFFFFFF
+                          text_color: 0x5F6368
 
                 - button:
                     id: mode_fan_button
@@ -505,12 +575,13 @@ lvgl:
                     width: 104
                     height: 70
                     radius: 8
-                    bg_color: 0x34A853
+                    bg_color: 0xE8EAED
                     border_width: 0
                     on_click:
                       - lvgl.label.update:
                           id: mode_status_label
                           text: "MODE FAN"
+                      - script.execute: show_mode_fan
                       - homeassistant.service:
                           service: climate.set_hvac_mode
                           data:
@@ -518,10 +589,11 @@ lvgl:
                             hvac_mode: fan_only
                     widgets:
                       - label:
+                          id: mode_fan_label
                           text: "FAN"
                           align: center
                           text_font: montserrat_16
-                          text_color: 0xFFFFFF
+                          text_color: 0x5F6368
 
                 - button:
                     id: mode_dry_button
@@ -530,12 +602,13 @@ lvgl:
                     width: 104
                     height: 70
                     radius: 8
-                    bg_color: 0xF9AB00
+                    bg_color: 0xE8EAED
                     border_width: 0
                     on_click:
                       - lvgl.label.update:
                           id: mode_status_label
                           text: "MODE DRY"
+                      - script.execute: show_mode_dry
                       - homeassistant.service:
                           service: climate.set_hvac_mode
                           data:
@@ -543,7 +616,8 @@ lvgl:
                             hvac_mode: dry
                     widgets:
                       - label:
+                          id: mode_dry_label
                           text: "DRY"
                           align: center
                           text_font: montserrat_16
-                          text_color: 0x202124
+                          text_color: 0x5F6368
